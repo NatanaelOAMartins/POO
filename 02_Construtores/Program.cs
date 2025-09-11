@@ -31,15 +31,17 @@ namespace _02_Construtores
         private int Lado;
 
         //
-        public Quadrado()
+        public Quadrado():this(5)
         {
-            this.Lado = 0;
+            //this.Lado = 0;
         }
 
         public Quadrado(int Lado)
         {
             
-            this.Lado = Lado;
+            if(Lado > 0)
+                this.Lado = Lado;
+            
 
         }
 
