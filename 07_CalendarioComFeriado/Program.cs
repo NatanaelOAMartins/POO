@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using _06_calendario;
 
-namespace _06_Calendario
+namespace _07_CalendarioComFeriado
 
 {
 
@@ -18,11 +18,6 @@ namespace _06_Calendario
         static void Main(string[] args)
 
         {
-
-
-            //Console.Write("Digite o mês (1..12)");
-
-            //int mes = int.Parse(Console.ReadLine());
 
             Console.Write("Digite o ano: ");
 
