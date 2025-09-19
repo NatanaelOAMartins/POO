@@ -69,7 +69,7 @@ namespace _06_calendario
                 {
                     if (calendario[semana, diaSemana] != 0)
                     {
-                        ehFeriado = false;
+                       /* ehFeriado = false;
                         for (int posicaoFeriado = 0; posicaoFeriado < diasFeriados.Length; posicaoFeriado++)
                         {
                             if (diasFeriados[posicaoFeriado] != null && diasFeriados[posicaoFeriado].Dia == calendario[semana, diaSemana])
@@ -77,8 +77,9 @@ namespace _06_calendario
                                 ehFeriado = true;
                                 break;
                             }
-                        }
-                        if (ehFeriado || diaSemana == 0)
+                        }*/
+                        //if (ehFeriado || diaSemana == 0)
+                            if (diasFeriados.Any(feriado => feriado != null && feriado.Dia == calendario[semana,diaSemana] )|| diaSemana == 0)
                             Console.ForegroundColor = ConsoleColor.Red;
 
                         Console.Write(calendario[semana, diaSemana].ToString("D2") + "\t");
