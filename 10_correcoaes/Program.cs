@@ -17,7 +17,7 @@ namespace _10_colecoes
             nomes.Add("Celso");
 
             List<Aluno> alunos = new List<Aluno>();
-            Aluno suely = new Aluno { Id = 1, Nome = "Suely"};
+            Aluno suely = new Aluno { Id = 1, Nome = "Suely" };
             AlunoEspecial celso = new AlunoEspecial { Id = 2, Nome = "Celso", Deficiencia = "Mudo" };
             alunos.Add(suely);
             alunos.Add(celso);
@@ -34,7 +34,7 @@ namespace _10_colecoes
             Console.WriteLine("Impressão dos Alunos:");
             foreach (Aluno aluno in alunos)
             {
-               aluno.ImprimirAluno();
+                aluno.ImprimirAluno();
             }
             Dictionary<int, string> dicNomes = new Dictionary<int, string>();
             dicNomes.Add(1, "suely");
@@ -44,7 +44,7 @@ namespace _10_colecoes
             Console.WriteLine("Impressão do Dicionário:");
             for (int i = 1; i <= dicNomes.Count; i++)
             {
-                Console.WriteLine($" - { dicNomes[i]}");
+                Console.WriteLine($" - {dicNomes[i]}");
             }
             Dictionary<int, Aluno> dicAlunos = new Dictionary<int, Aluno>();
             dicAlunos.Add(suely.Id, suely);
@@ -66,12 +66,12 @@ namespace _10_colecoes
 
 
             Console.WriteLine("Impressão da Fila:");
-            Console.WriteLine($" 1°){ filaNomes.Dequeue()}");
+            Console.WriteLine($" 1°){filaNomes.Dequeue()}");
             foreach (String nome in filaNomes)
             {
                 Console.WriteLine($" - {nome}");
             }
-            Stack<string>stackNomes = new Stack<string>();
+            Stack<string> stackNomes = new Stack<string>();
             stackNomes.Push("Suely");
             stackNomes.Push("Celso");
             stackNomes.Push("Gustavo");
@@ -103,7 +103,7 @@ namespace _10_colecoes
         public string Nome { get; set; }
         public int Id { get; set; }
         public double[] Nota { get; set; }
-        public virtual  void ImprimirAluno()
+        public virtual void ImprimirAluno()
         {
             Console.WriteLine($"-Id: {this.Id}, Nome: {this.Nome}");
         }
@@ -116,5 +116,6 @@ namespace _10_colecoes
         {
             Console.WriteLine($"-id: {this.Id}, Nome: {this.Nome} - {this.Deficiencia}");
         }
+
     }
 }
