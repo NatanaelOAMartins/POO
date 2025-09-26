@@ -36,6 +36,65 @@ namespace _10_colecoes
             {
                aluno.ImprimirAluno();
             }
+            Dictionary<int, string> dicNomes = new Dictionary<int, string>();
+            dicNomes.Add(1, "suely");
+            dicNomes.Add(2, "celso");
+            dicNomes.Add(3, "gustavo");
+
+            Console.WriteLine("Impressão do Dicionário:");
+            for (int i = 1; i <= dicNomes.Count; i++)
+            {
+                Console.WriteLine($" - { dicNomes[i]}");
+            }
+            Dictionary<int, Aluno> dicAlunos = new Dictionary<int, Aluno>();
+            dicAlunos.Add(suely.Id, suely);
+            dicAlunos.Add(celso.Id, celso);
+
+            Console.WriteLine("Impressão do DicAlunos:");
+            //for (int i = 1; i <= dicAlunos.Count; i++) ;
+            //{
+            //    dicAlunos[i].ImprimirAluno();
+            //}
+            foreach (Aluno aluno in dicAlunos.Values)
+            {
+                aluno.ImprimirAluno();
+            }
+            Queue<string> filaNomes = new Queue<string>();
+            filaNomes.Enqueue("Suely");
+            filaNomes.Enqueue("Celso");
+            filaNomes.Enqueue("Gustavo");
+
+
+            Console.WriteLine("Impressão da Fila:");
+            Console.WriteLine($" 1°){ filaNomes.Dequeue()}");
+            foreach (String nome in filaNomes)
+            {
+                Console.WriteLine($" - {nome}");
+            }
+            Stack<string>stackNomes = new Stack<string>();
+            stackNomes.Push("Suely");
+            stackNomes.Push("Celso");
+            stackNomes.Push("Gustavo");
+            Console.WriteLine("Impressão dos stackNomes:");
+            Console.WriteLine($" 1°){stackNomes.Pop()}");
+
+            foreach (String nome in stackNomes)
+            {
+                Console.WriteLine($" - {nome}");
+            }
+            HashSet<string> setNomes = new HashSet<string>();
+            setNomes.Add("Suely");
+            setNomes.Add("Celso");
+            setNomes.Add("Gustavo");
+            //vamos duplicar
+            setNomes.Add("Suely");
+            setNomes.Add("Celso");
+            setNomes.Add("Gustavo");
+
+            foreach (String nome in setNomes)
+            {
+                Console.WriteLine($" - {nome}");
+            }
 
         }
     }
